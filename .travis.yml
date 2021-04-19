@@ -14,7 +14,6 @@ cache:
   directories:
   - "$HOME/.gradle/caches/"
   - "$HOME/.gradle/wrapper/"
-
 install: skip
 addons:
   sonarcloud:
@@ -24,10 +23,10 @@ jobs:
   - stage: dev
     name: build & unit test & sonar qube
     script:
-    - ./gradlew build
-    - ./gradlew test jacocoTestReport sonarqube
+    - "./gradlew build"
+    - "./gradlew test jacocoTestReport sonarqube"
 deploy:
   provider: heroku
   api_key:
-    secure: pcImK+O6B/qfz0fQzQJRHir/o/xeK7yv2eKOCEzKl2ueJ7M1xK8k8xoUSTZwVDm3aOInREE2YiUdPvr6I3+QstoImpz6M23VMpMBNgaTnY+sqTTqTac0s6ePuhVltRlomblutfQxI2lfgh4OiYlVy4FeA2wVtMixsRqcdAR0ZsI4lt2dglW/dGLFFoH8tE1u3fi4zF/L1JoiuE8pvSTXXg64Ngt+15g5DRkRNZCvCeq0Hg+KN3d1RLyBmt1DYKTamwkPW7vstu+b0hB9hqt46pkM9eFopBOu3h9mT1HmHGKgHEQRWuhVtZBIN0iy2L1LHqiMtMovqiutVyB3bhZxJGGFqBj03GUsU9Ii5ebAe16S7BpkXQpdNZr2jhHrhWbs4Gfqan8NkByrxhL3KF0fXuqDL0SSGpKRMviJJoBhGbQfEHQZRdfM451xllxErgEj+EM6hzZ4acFV1oUGbg53NZ8nTKvTBlaLJ4H55mHtvoVEI6qS2eT9fOJVXt1tAjNgDbXiOU48elWFE6/rVX89nClb2SRxJz9NArjswOL6MnUOJIf2mLODWCjYzNwDk6cHhNVDwREKPZ2Mm1bUPND8XHBKEzRkqBpgt9NmgXhTyvDrFzidjeo0BaI6zyWlUhrNpRq/ySoxzMIdZwPBl/9/TQfXr34+JsaZs3DN032+eVs=
+    secure: 173ospNHJUDesQW+DMNApXv0icrAJPBNAfG9KtOaArueYg7RT5/1Fbn0aXIgl63/dIEAVhybklDXMSx+y4vLEQNZM+7deaD8KPFSHg3ulN/u64GnZMda/snigUG0WtmmEetRhS6NTy7Cl9yVOb1LQc97uPYoy559dFoXUUrauAuxke6MH61yUCvbA6FUUSnYEGO2rJgWC3rZlzdFyFpVI8Kxa9nM5Sx+RZ0V0Qwof+gV8vdAe+Wi1J4+BLHdLsKaFhwmWMEpxBinJMMDIDPkf4TDF+EHyxTJO/X4Wk4x1VcrIlcbaFsljEEUqH7bxUYlYdD9ZelKo5HKJhiLDm1SWExgPcko3vb0vd1YcciFYNTPy4Z5AJsolTYa9/U+MPrJ+nujVa7CUn4zavdUgR9fm42RYzq6SlgD/7qqX6VnjXPpr90G2Eky6ypQPMrFOwLVsW+RuBYTOtLjIZsUzshLhoex2JFQosXyP3AP6K8q16oCT3vK5OevAY7KzakJ1taKh41KcVZSOKqqrLTppqJp5yZ/YoCYHdKud9gxw2DNB7tBogpHz++pr97KvFN+La7BtKCuQvhbgo3pFP5NH0ibtmEE/WfIfKR0ERDHmx4V3W8aNCSJlEqC4+E9srmV1GV+5xruBTEAD3EfEC9BEqISt7pVMbxvm1AvTxBRRsuw/ro=
   app: evidence-based-management

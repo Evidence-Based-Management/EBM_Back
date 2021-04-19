@@ -14,4 +14,3 @@
 ## Swagger documentation:
  [Evidence Based Managemen API](https://evidence-based-management.herokuapp.com/ebm/api/swagger-ui.html)
 
-R
