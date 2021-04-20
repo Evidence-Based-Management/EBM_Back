@@ -15,7 +15,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/teams")
-@CrossOrigin(origins = {"http://localhost:4200", "https://leolplex.github.io"}, methods = {RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT})
+@CrossOrigin(origins = {"http://localhost:4200", "https://leolplex.github.io", "https://evidence-based-management.github.io"}, methods = {RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT})
 public class TeamController {
     @Autowired
     private final TeamService teamService;

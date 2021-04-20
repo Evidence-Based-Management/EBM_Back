@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
  * Basic Controller which is called for unhandled errors
  */
 @Controller
-@CrossOrigin(origins = {"http://localhost:4200", "https://leolplex.github.io"}, methods = {RequestMethod.GET})
+@CrossOrigin(origins = {"http://localhost:4200", "https://leolplex.github.io", "https://evidence-based-management.github.io"}, methods = {RequestMethod.GET})
 public class AppErrorController implements ErrorController {
 
 
