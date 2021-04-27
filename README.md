@@ -11,6 +11,13 @@
 [![SonarCloud Duplicated Lines](https://sonarcloud.io/api/project_badges/measure?project=leolplex_API-Evidence-Based-Management&metric=duplicated_lines_density)](https://sonarcloud.io/dashboard?id=leolplex_API-Evidence-Based-Management)
 [![SonarCloud Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=leolplex_API-Evidence-Based-Management&metric=vulnerabilities)](https://sonarcloud.io/dashboard?id=leolplex_API-Evidence-Based-Management)
 
+## Run the project in Docker
+1. Install Docker
+2. Update the path [Your_Path_To_Scripts] in docker-compose.yml aiming at your scripts path 
+3. Run the command:
+   
+   ``` docker-compose up ```
+
 ## Swagger documentation:
  [Evidence Based Managemen API](https://evidence-based-management.herokuapp.com/ebm/api/swagger-ui.html)
 
