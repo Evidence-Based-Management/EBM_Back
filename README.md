@@ -1,7 +1,7 @@
 # Evidence Based Managgement | Java Spring Boot - API
 
 ## TravisCI Pipeline status:
-[![leolplex](https://travis-ci.com/leolplex/API-Evidence-Based-Management.svg?branch=master)](https://travis-ci.com/github/leolplex/API-Evidence-Based-Management)
+[![leolplex](https://travis-ci.com/Evidence-Based-Management/EBM_Back.svg?branch=master)](https://travis-ci.com/github/Evidence-Based-Management/EBM_Back)
 
 ## Sonarcloud status:
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=leolplex_API-Evidence-Based-Management&metric=alert_status)](https://sonarcloud.io/dashboard?id=leolplex_API-Evidence-Based-Management)
