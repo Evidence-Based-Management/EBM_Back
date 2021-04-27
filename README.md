@@ -13,8 +13,9 @@
 
 ## Run the project in Docker
 1. Install Docker
-2. Update the path [Your_Path_To_Scripts] in docker-compose.yml aiming at your scripts path 
-3. Run the command:
+2. Run ./gradlew bootBuildImage --imageName=springbootdemo 
+3. Update the path [Your_Path_To_Scripts] in docker-compose.yml aiming at your scripts path 
+4. Run the command:
    
    ``` docker-compose up ```
 
