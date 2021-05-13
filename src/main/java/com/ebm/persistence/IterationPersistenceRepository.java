@@ -71,22 +71,25 @@ public class IterationPersistenceRepository implements IterationRepository {
     public Optional<Iteration> update(int idIteration, Iteration iteration) {
         return iterationCrudRepository.findById(idIteration).map(iterationDB -> {
 
-            if (iteration.getName() != null && !iteration.getName().equals("") && !iteration.getName().equals(iterationDB.getEntityName())) {
+            if (iteration.getName() != null && !iteration.getName().isEmpty()
+                    && !iteration.getName().equals(iterationDB.getEntityName())) {
                 iterationDB.setEntityName(iteration.getName());
             }
 
-            if (iteration.getGoal() != null && !iteration.getGoal().equals("") && !iteration.getGoal().equals(iterationDB.getEntityGoal())) {
+            if (iteration.getGoal() != null &&!iteration.getGoal().isEmpty()
+                    && !iteration.getGoal().equals(iterationDB.getEntityGoal())) {
                 iterationDB.setEntityGoal(iteration.getGoal());
             }
             if (iteration.getStartDate() != null && iteration.getStartDate() != iterationDB.getEntityStartDate()) {
                 iterationDB.setEntityStartDate(iteration.getStartDate());
             }
 
-            if (iteration.getEndDate() != null && iteration.getEndDate() != iterationDB.getEntityEndDate()) {
+            if (iteration.getEndDate() != null &&iteration.getEndDate() != iterationDB.getEntityEndDate()) {
                 iterationDB.setEntityEndDate(iteration.getEndDate());
             }
 
-            if (iteration.getState() != null && !iteration.getState().equals("") && !iteration.getState().equals(iterationDB.getEntityState())) {
+            if (iteration.getState() != null &&!iteration.getState().isEmpty()
+                    && !iteration.getState().equals(iterationDB.getEntityState())) {
                 iterationDB.setEntityState(iteration.getState());
             }
 
