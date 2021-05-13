@@ -147,7 +147,7 @@ class IterationPersistenceRepositoryTest {
     @Test
     void TestUpdateWithDiffData() {
         LocalDateTime dateTime = LocalDateTime.now();
-        EntityIteration eIteration =new EntityIteration();
+        EntityIteration eIteration = new EntityIteration();
         eIteration.setEntityName("My iteration");
         eIteration.setEntityGoal("My Goal");
         eIteration.setEntityStartDate(dateTime);
