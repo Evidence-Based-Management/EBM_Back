@@ -128,14 +128,7 @@ class IterationPersistenceRepositoryTest {
 
     @Test
     void TestUpdateWithData() {
-        EntityIteration eIteration =new EntityIteration();
-        eIteration.setEntityName("My iteration 2");
-        eIteration.setEntityGoal("My Goal 2");
-        eIteration.setEntityStartDate(LocalDateTime.now().minusDays(1));
-        eIteration.setEntityEndDate(LocalDateTime.now().minusDays(1));
-        eIteration.setEntityState("My State 2");
-
-        Optional<EntityIteration> iteration = Optional.of(eIteration);
+        Optional<EntityIteration> iteration = Optional.of(new EntityIteration());
         Optional<Iteration> iterationDomain = Optional.of(new Iteration());
         iterationDomain.get().setName("My iteration");
         iterationDomain.get().setGoal("My Goal");
@@ -153,19 +146,20 @@ class IterationPersistenceRepositoryTest {
 
     @Test
     void TestUpdateWithDiffData() {
+        LocalDateTime dateTime = LocalDateTime.now();
         EntityIteration eIteration =new EntityIteration();
         eIteration.setEntityName("My iteration");
         eIteration.setEntityGoal("My Goal");
-        eIteration.setEntityStartDate(LocalDateTime.now());
-        eIteration.setEntityEndDate(LocalDateTime.now());
+        eIteration.setEntityStartDate(dateTime);
+        eIteration.setEntityEndDate(dateTime);
         eIteration.setEntityState("My State");
 
         Optional<EntityIteration> iteration = Optional.of(eIteration);
         Optional<Iteration> iterationDomain = Optional.of(new Iteration());
         iterationDomain.get().setName("My iteration");
         iterationDomain.get().setGoal("My Goal");
-        iterationDomain.get().setStartDate(LocalDateTime.now());
-        iterationDomain.get().setEndDate(LocalDateTime.now());
+        iterationDomain.get().setStartDate(dateTime);
+        iterationDomain.get().setEndDate(dateTime);
         iterationDomain.get().setState("My State");
 
         when(iterationCrudRepository.findById(1)).thenReturn(iteration);
