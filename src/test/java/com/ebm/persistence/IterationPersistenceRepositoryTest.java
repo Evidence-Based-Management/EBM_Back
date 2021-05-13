@@ -190,6 +190,8 @@ class IterationPersistenceRepositoryTest {
         iterationDomain.get().setName("");
         iterationDomain.get().setGoal("");
         iterationDomain.get().setState("");
+        iterationDomain.get().setStartDate(null);
+        iterationDomain.get().setEndDate(null);
 
         when(iterationCrudRepository.findById(1)).thenReturn(iteration);
         when(iterationCrudRepository.save(iteration.get())).thenReturn(iteration.get());
