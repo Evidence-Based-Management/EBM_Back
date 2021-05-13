@@ -147,11 +147,11 @@ class IterationPersistenceRepositoryTest {
     @Test
     void TestUpdateWithDiffData() {
         EntityIteration eIteration =new EntityIteration();
-        eIteration.setEntityName("My iteration 2");
-        eIteration.setEntityGoal("My Goal 2");
-        eIteration.setEntityStartDate(LocalDateTime.now().minusDays(1));
-        eIteration.setEntityEndDate(LocalDateTime.now().minusDays(1));
-        eIteration.setEntityState("My State22");
+        eIteration.setEntityName("My iteration");
+        eIteration.setEntityGoal("My Goal");
+        eIteration.setEntityStartDate(LocalDateTime.now());
+        eIteration.setEntityEndDate(LocalDateTime.now());
+        eIteration.setEntityState("My State");
 
         Optional<EntityIteration> iteration = Optional.of(eIteration);
         Optional<Iteration> iterationDomain = Optional.of(new Iteration());
