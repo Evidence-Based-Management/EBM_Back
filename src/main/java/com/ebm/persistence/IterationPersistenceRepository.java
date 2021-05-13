@@ -71,9 +71,24 @@ public class IterationPersistenceRepository implements IterationRepository {
     public Optional<Iteration> update(int idIteration, Iteration iteration) {
         return iterationCrudRepository.findById(idIteration).map(iterationDB -> {
 
-            iteration.setId(iterationDB.getEntityId());
-            iteration.setIdProduct(iterationDB.getEntityIdProduct());
-            iterationDB = mapper.toIterationDomain(iteration);
+            if (iteration.getName() != null && !iteration.getName().equals("") && !iteration.getName().equals(iterationDB.getEntityName())) {
+                iterationDB.setEntityName(iteration.getName());
+            }
+
+            if (iteration.getGoal() != null && !iteration.getGoal().equals("") && !iteration.getGoal().equals(iterationDB.getEntityGoal())) {
+                iterationDB.setEntityGoal(iteration.getGoal());
+            }
+            if (iteration.getStartDate() != null && iteration.getStartDate() != iterationDB.getEntityStartDate()) {
+                iterationDB.setEntityStartDate(iteration.getStartDate());
+            }
+
+            if (iteration.getEndDate() != null && iteration.getEndDate() != iterationDB.getEntityEndDate()) {
+                iterationDB.setEntityEndDate(iteration.getEndDate());
+            }
+
+            if (iteration.getState() != null && !iteration.getState().equals("") && !iteration.getState().equals(iterationDB.getEntityState())) {
+                iterationDB.setEntityState(iteration.getState());
+            }
 
             return mapper.toIteration(iterationCrudRepository.save(iterationDB));
         });
